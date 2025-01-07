@@ -1,0 +1,15 @@
+subscription_id = "your-subscription-id"
+client_id       = "your-client-id"
+client_secret   = "your-client-secret"
+tenant_id       = "your-tenant-id"
+
+resource_group_name = "my-resource-group"
+location            = "East US"
+virtual_network_name = "my-vnet"
+subnet_name         = "my-subnet"
+network_interface_name = "my-nic"
+vm_name             = "my-vm"
+vm_size             = "Standard_B1s"
+admin_username      = "azureuser"
+admin_password      = "P@ssw0rd123!"
+os_disk_size        = 50

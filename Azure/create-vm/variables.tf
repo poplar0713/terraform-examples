@@ -22,37 +22,37 @@ variable "tenant_id" {
 variable "resource_group_name" {
   description = "Name of the resource group"
   type        = string
-  default     = "example-resource-group"
+  default     = "rg-example"
 }
 
 variable "location" {
   description = "Azure region for resources"
   type        = string
-  default     = "East US"
+  default     = "Korea Central"
 }
 
 variable "virtual_network_name" {
   description = "Name of the Virtual Network"
   type        = string
-  default     = "example-vnet"
+  default     = "vnet-example"
 }
 
 variable "subnet_name" {
   description = "Name of the Subnet"
   type        = string
-  default     = "example-subnet"
+  default     = "sn-example"
 }
 
 variable "network_interface_name" {
   description = "Name of the Network Interface"
   type        = string
-  default     = "example-nic"
+  default     = "nic-example"
 }
 
 variable "vm_name" {
   description = "Name of the Virtual Machine"
   type        = string
-  default     = "example-vm"
+  default     = "vm-example"
 }
 
 variable "vm_size" {

@@ -88,13 +88,13 @@ variable "os_publisher" {
 variable "os_offer" {
   description = "OS image Offer"
   type        = string
-  default     = "UbuntuServer"
+  default     = "0001-com-ubuntu-pro-jammy"
 }
 
 variable "os_sku" {
   description = "OS image SKU"
   type        = string
-  default     = "22_04-lts-cvm"
+  default     = "pro-22_04-lts"
 }
 
 variable "os_version" {

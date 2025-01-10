@@ -12,6 +12,8 @@ resource "azurerm_virtual_network" "example" {
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
   address_space       = ["10.0.0.0/16"]
+
+  depends_on = [azurerm_resource_group.example]
 }
 
 resource "azurerm_subnet" "example" {
@@ -19,6 +21,8 @@ resource "azurerm_subnet" "example" {
   resource_group_name  = azurerm_resource_group.example.name
   virtual_network_name = azurerm_virtual_network.example.name
   address_prefixes     = ["10.0.1.0/24"]
+
+    depends_on = [azurerm_virtual_network.example]
 }
 
 resource "azurerm_network_interface" "example" {
@@ -31,6 +35,7 @@ resource "azurerm_network_interface" "example" {
     subnet_id                     = azurerm_subnet.example.id
     private_ip_address_allocation = "Dynamic"
   }
+  depends_on = [azurerm_virtual_network.example]
 }
 
 resource "azurerm_linux_virtual_machine" "example" {
@@ -56,4 +61,6 @@ resource "azurerm_linux_virtual_machine" "example" {
     sku       = var.os_sku
     version   = var.os_version
   }
+
+    depends_on = [azurerm_virtual_network.example]
 }

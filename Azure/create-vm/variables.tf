@@ -78,3 +78,27 @@ variable "os_disk_size" {
   type        = number
   default     = 30
 }
+
+variable "os_publisher" {
+  description = "OS image Publisher"
+  type        = string
+  default     = "Canonical"
+}
+
+variable "os_offer" {
+  description = "OS image Offer"
+  type        = string
+  default     = "UbuntuServer"
+}
+
+variable "os_sku" {
+  description = "OS image SKU"
+  type        = string
+  default     = "22_04-lts-cvm"
+}
+
+variable "os_version" {
+  description = "OS image Version"
+  type        = string
+  default     = "latest"
+}

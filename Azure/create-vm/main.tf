@@ -64,3 +64,9 @@ resource "azurerm_linux_virtual_machine" "example" {
 
     depends_on = [azurerm_virtual_network.example]
 }
+
+terraform {
+  backend "local" {
+    path = "Azure/create-vm/terraform.tfstate"
+  }
+}

@@ -67,6 +67,6 @@ resource "azurerm_linux_virtual_machine" "example" {
 
 terraform {
   backend "local" {
-    path = "Azure/create-vm/terraform.tfstate"
+    path = "terraform.tfstate"
   }
 }
